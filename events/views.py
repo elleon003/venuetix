@@ -28,5 +28,8 @@ def event_detail(request, id, slug):
     return render(
         request,
         'events/detail.html',
-        {'event': event}
+        context = {
+            'event': event,
+            'cart_event_form': cart_event_form,
+        }
     )
